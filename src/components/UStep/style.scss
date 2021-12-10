@@ -1,0 +1,61 @@
+$activeColor: #D60006;
+$disableColor: #C1C1C1;
+
+.step {
+  font-size: 24px;
+  font-weight: 500;
+  @include flexLayout(row, space-around);
+
+  .step-item {
+    @include flexLayout(column, space-around);
+    flex: 1;
+    position: relative;
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .point {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    .line {
+      position: absolute;
+      height: 2px;
+      width: 50%;
+      bottom: 10px;
+      transform: translateX(100%);
+      // z-index: -1;
+    }
+  }
+
+  .step-disable {
+    .point {
+      background-color: $disableColor;
+    }
+
+    .title {
+      color: $disableColor;
+    }
+  }
+
+  .step-active {
+    .point {
+      background-color: $activeColor;
+    }
+
+    .title {
+      color: $activeColor;
+    }
+  }
+
+  .line-active {
+    background-color: $activeColor;
+  }
+
+  .line-dsiable {
+    background-color: $disableColor;
+  }
+}

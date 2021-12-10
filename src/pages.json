@@ -1,0 +1,503 @@
+{
+  "pages": [
+    {
+      "path": "pages/launch/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/serve/serve",
+      "style": {
+        "navigationBarTitleText": "服务"
+      }
+    },
+    {
+      "path": "pages/webView/webView",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/webView/webViewShare",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/webView/within",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/pkBuilding/index",
+      "style": {
+        "navigationBarTitleText": "楼盘",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/pkMine/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "tabBar": {
+    "selectedColor": "#F0C17B",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "优惠",
+        "iconPath": "/static/tab-icon-1-0.png",
+        "selectedIconPath": "/static/tab-icon-1-1.png"
+      },
+      {
+        "pagePath": "pages/pkBuilding/index",
+        "text": "买房",
+        "iconPath": "/static/tab-icon-2-0.png",
+        "selectedIconPath": "/static/tab-icon-2-1.png"
+      },
+      {
+        "pagePath": "pages/serve/serve",
+        "text": "服务",
+        "iconPath": "/static/tab-icon-3-0.png",
+        "selectedIconPath": "/static/tab-icon-3-1.png"
+      },
+      {
+        "pagePath": "pages/pkMine/index",
+        "text": "我的",
+        "iconPath": "/static/tab-icon-4-0.png",
+        "selectedIconPath": "/static/tab-icon-4-1.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "pkBuilding",
+      "pages": [
+        {
+          "path": "detail",
+          "style": {
+            "navigationBarTitleText": "楼盘详情",
+            "mp-weixin": {
+              "usingComponents": {
+                "cell": "plugin://contactPlugin/cell"
+              }
+            }
+          }
+        },
+        {
+          "path": "hosetypedetail",
+          "style": {
+            "navigationBarTitleText": "户型介绍"
+          }
+        },
+        {
+          "path": "vr",
+          "style": {
+            "navigationBarTitleText": "VR展示"
+          }
+        },
+        {
+          "path": "RealEstateInformation/index",
+          "style": {
+            "navigationBarTitleText": "楼盘信息"
+          }
+        },
+        {
+          "path": "recommend/index",
+          "style": {
+            "navigationBarTitleText": "推荐客户"
+          }
+        },
+        {
+          "path": "coustomer/index",
+          "style": {
+            "navigationBarTitleText": "我的客户",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "commission/index",
+          "style": {
+            "navigationBarTitleText": "我的佣金 ",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "coustomer/detail",
+          "style": {
+            "navigationBarTitleText": "客户详情"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pkMine",
+      "pages": [
+        {
+          "path": "coupon/list",
+          "style": {
+            "navigationBarTitleText": "我的优惠券",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "order/list",
+          "style": {
+            "navigationBarTitleText": "我的订单",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "order/detail",
+          "style": {
+            "navigationBarTitleText": "订单详情"
+          }
+        },
+        {
+          "path": "writeoff/writeoff",
+          "style": {
+            "navigationBarTitleText": "优惠券核销",
+            "disableScroll": true
+          }
+        },
+        {
+          "path": "feedback/feedback",
+          "style": {
+            "navigationBarTitleText": "意见反馈",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "feedback/about/index",
+          "style": {
+            "navigationBarTitleText": "关于奥园云"
+          }
+        },
+        {
+          "path": "feedback/about/agreenmentList",
+          "style": {
+            "navigationBarTitleText": "协议条款"
+          }
+        },
+        {
+          "path": "personal/index",
+          "style": {
+            "navigationBarTitleText": "我的资料",
+            "mp-weixin": {
+              "usingComponents": {
+                "we-cropper": "/wxcomponents/we-cropper/index"
+              }
+            }
+          }
+        },
+        {
+          "path": "personal/address",
+          "style": {
+            "navigationBarTitleText": "修改地址"
+          }
+        },
+        {
+          "path": "cardbag/index",
+          "style": {
+            "navigationBarTitleText": "我的权益",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "cardbag/cardbagdetail/index",
+          "style": {
+            "navigationBarTitleText": "IP资产兑换"
+          }
+        },
+        {
+          "path": "Inviteregister/index",
+          "style": {
+            "navigationBarTitleText": "邀请好友注册",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "cardbag/cardbaghistorical/index",
+          "style": {
+            "navigationBarTitleText": "历史记录",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "message/index",
+          "style": {
+            "navigationBarTitleText": "信息列表 ",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "earnings/index",
+          "style": {
+            "navigationBarTitleText": "我的收益",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "earnings/cash/index",
+          "style": {
+            "navigationBarTitleText": "选择结算",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "earnings/cash/confirm",
+          "style": {
+            "navigationBarTitleText": "确认结算",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "earnings/cash/result",
+          "style": {
+            "navigationBarTitleText": "结算申请成功",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "earnings/cashList/index",
+          "style": {
+            "navigationBarTitleText": "结算记录",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "earnings/cashList/detail",
+          "style": {
+            "navigationBarTitleText": "结算详情",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "invite/index",
+          "style": {
+            "navigationBarTitleText": "我的邀请",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "invite/details",
+          "style": {
+            "navigationBarTitleText": "关联邀请",
+            "enablePullDownRefresh": true
+          }
+        },
+				{
+					"path": "safety/index",
+					"style": {
+						"navigationBarTitleText": "安全中心",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "safety/center",
+					"style": {
+						"navigationBarTitleText": "实名认证中心"
+					}
+				},
+				{
+					"path": "safety/bank/index",
+					"style": {
+						"navigationBarTitleText": "我的银行卡"
+					}
+				},
+				{
+					"path": "safety/bank/add",
+					"style": {
+						"navigationBarTitleText": "绑定银行卡"
+					}
+				}
+      ]
+    },
+    {
+      "root": "pkPromotion",
+      "pages": [
+        {
+          "path": "promotion/index",
+          "style": {
+            "navigationBarTitleText": "活动列表"
+          }
+        },
+        {
+          "path": "promotion/detail",
+          "style": {
+            "navigationBarTitleText": "活动详情"
+          }
+        },
+        {
+          "path": "promotion/signup",
+          "style": {
+            "navigationBarTitleText": "活动报名"
+          }
+        },
+        {
+          "path": "lucky/index",
+          "style": {
+            "navigationBarTitleText": "幸运抽奖"
+          }
+        },
+        {
+          "path": "Information/index",
+          "style": {
+            "navigationBarTitleText": "资讯列表"
+          }
+        },
+        {
+          "path": "aplus/index",
+          "style": {
+            "navigationBarTitleText": "A+工厂资讯列表"
+          }
+        },
+        {
+          "path": "activity/index",
+          "style": {
+            "navigationBarTitleText": "客户活动"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pkCoupon",
+      "pages": [
+        {
+          "path": "index",
+          "style": {
+            "navigationBarTitleText": "优惠券列表",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "detail/index",
+          "style": {
+            "navigationBarTitleText": "优惠券详情"
+          }
+        },
+        {
+          "path": "detail/map",
+          "style": {
+            "navigationBarTitleText": "地图"
+          }
+        },
+        {
+          "path": "detail/storeList",
+          "style": {
+            "navigationBarTitleText": "店铺列表"
+          }
+        },
+        {
+          "path": "cardbag/index",
+          "style": {
+            "navigationBarTitleText": "平台权益",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "cardbagdetails/index",
+          "style": {
+            "navigationBarTitleText": "权益详情"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pkPublic",
+      "pages": [
+        {
+          "path": "login/login",
+          "style": {
+            "navigationBarTitleText": "登录"
+          }
+        },
+        {
+          "path": "login/file",
+          "style": {
+            "navigationBarTitleText": ""
+          }
+        },
+        {
+          "path": "city-positioning/index",
+          "style": {
+            "navigationBarTitleText": "选择城市 ",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "building-selector/building-selector",
+          "style": {
+            "navigationBarTitleText": "选择楼盘"
+          }
+        },
+        {
+          "path": "building-selector/appoint",
+          "style": {
+            "navigationBarTitleText": "指定置业顾问"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pkSNS",
+      "pages": [
+        {
+          "path": "invite/invite",
+          "style": {
+            "navigationBarTitleText": "我的邀请 "
+          }
+        },
+        {
+          "path": "invite/qrcode",
+          "style": {
+            "navigationBarTitleText": "邀请注册 "
+          }
+        },
+        {
+          "path": "promotion/promotion",
+          "style": {
+            "navigationBarTitleText": "我的活动 "
+          }
+        },
+        {
+          "path": "promotion/signup",
+          "style": {
+            "navigationBarTitleText": "活动信息"
+          }
+        },
+        {
+          "path": "share/share",
+          "style": {
+            "navigationBarTitleText": "邀请注册"
+          }
+        }
+      ]
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxd94a16a49ad94404"
+  ]
+}

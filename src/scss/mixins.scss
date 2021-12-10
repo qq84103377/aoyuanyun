@@ -1,0 +1,289 @@
+// 设置行高，字间距
+
+@mixin setFontStyle($size) {
+  font-size: $size;
+  line-height: $size * 1.4;
+  letter-spacing: 0.58;
+}
+
+// 通过设置放在assets目录的图片名字设置绝对路径URL
+@mixin setImageUrl($image-name) {
+  background-image: url($ui-asset-url+$image-name);
+}
+
+// 设置背景图片，通过设置放在assets目录的图片名字设置绝对路径URL
+@mixin setBackgroundImage($image-name) {
+  background-image: url($ui-asset-url+$image-name);
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+// 设置边框
+@mixin setAfterBorder($radius, $color) {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: $radius * 2;
+    border: solid 2px $color;
+    pointer-events: none;
+  }
+}
+
+// 设置文字超过显示...
+@mixin setEllipsis() {
+  word-wrap: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin setEllipsisWidth($width: auto) {
+  @include setEllipsis();
+  max-width: $width;
+}
+
+@mixin setEllipsisLine($line) {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin setTextWrap() {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@mixin hyphens() {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/*
+ * 设置flex布局
+ * @param direction  主轴方向
+ * @param justifyContent  justify 分布
+ * @param alignItems   align 分布
+ */
+@mixin flexLayout($direction: row,
+  $justifyContent: center,
+  $alignItems: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+// 设置input、textarea等placeholder文字默认颜色
+@mixin setPlaceholderStyle($color) {
+  &::-webkit-input-placeholder {
+    color: $color !important;
+  }
+
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $color !important;
+  }
+
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $color !important;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color !important;
+  }
+}
+
+@mixin setTopLine($c: #ededed) {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 2px;
+  border-top: 2px solid $c;
+  color: $c;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+  pointer-events: none;
+}
+
+@mixin setBottomLine($c: #ededed) {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  border-bottom: 1px solid $c;
+  color: $c;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+  pointer-events: none;
+}
+
+@mixin setLeftLine($c: #ededed) {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  bottom: 0;
+  border-left: 2px solid $c;
+  color: $c;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+  pointer-events: none;
+}
+
+@mixin setRightLine($c: #ededed) {
+  content: ' ';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  bottom: 0;
+  border-right: 2px solid $c;
+  color: $c;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+  pointer-events: none;
+}
+
+@mixin setLine($c: #ededed) {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  border: 2px solid $c;
+  color: $c;
+  height: 200%;
+  transform-origin: left top;
+  transform: scale(0.5);
+  pointer-events: none;
+}
+
+// 设置tap颜色
+@mixin setTapColor($color: rgba(0, 0, 0, 0)) {
+  -webkit-tap-highlight-color: $color;
+}
+
+// 设置icon的尺寸，结构为  <div></img></div>
+@mixin setIconSize($w: 0.8rem, $h: 0.8rem) {
+  width: $w;
+  height: $h;
+  vertical-align: middle;
+  display: inline-block;
+
+  img {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+// flow组件需要用到的mixin
+@mixin setBubbleCommon($height,
+  $backgroundColor,
+  $fontSize,
+  $color,
+  $borderRadius) {
+  height: $height;
+  line-height: $height;
+  background-color: $backgroundColor;
+  font-size: $fontSize;
+  color: $color;
+  white-space: nowrap;
+  padding: 0 12px;
+  position: relative;
+  border-radius: $borderRadius;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    position: absolute;
+  }
+}
+
+@mixin setBubblePrivate($direction, $backgroundColor) {
+  @if $direction==top {
+    &:after {
+      border-color: $backgroundColor transparent transparent transparent;
+      border-style: solid;
+      border-width: 10px 6px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: -20px;
+    }
+  }
+
+  @else if $direction==bottom {
+    &:after {
+      border-color: transparent transparent $backgroundColor transparent;
+      border-style: dashed dashed solid dashed;
+      border-width: 10px 6px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      top: -20px;
+    }
+  }
+
+  @else if $direction==left {
+    &:after {
+      border-color: transparent transparent transparent $backgroundColor;
+      border-style: solid;
+      border-width: 6px 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: -20px;
+    }
+  }
+
+  @else if $direction==right {
+    &:after {
+      border-color: transparent $backgroundColor transparent transparent;
+      border-style: solid;
+      border-width: 6px 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: -20px;
+    }
+  }
+}
+
+// 设置水平和垂直居中
+@mixin setPositionLayout($pos: absolute, $l: 50%, $t: 50%) {
+  position: $pos;
+  left: $l;
+  top: $t;
+  $copyL: $l;
+  $copyT: $t;
+
+  @if $l==0 {
+    $copyL: 0;
+  }
+
+  @if $t==0 {
+    $copyT: 0;
+  }
+
+  transform: translate(-$copyL, -$copyT);
+}

@@ -1,0 +1,23 @@
+.u-money-input {
+  margin: 0 30px;
+  background-color: #fff;
+
+  .input-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+      font-size: 60px;
+      color: #09122B;
+      width: 60px;
+    }
+
+    input {
+      font-size: 48px;
+      height: 66px;
+      flex: 1;
+      margin-left: 20px;
+    }
+  }
+}

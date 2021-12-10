@@ -1,0 +1,165 @@
+.u-btn {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  text-align: center;
+  margin: 40px 50px;
+  width: auto;
+  height: auto;
+  font-size: 32px;
+  font-weight: 500;
+
+  &.padding-0 {
+    padding: 0px !important;
+  }
+
+  &.padding-s {
+    padding: 30px !important;
+  }
+
+  &.btn-4-product {
+    margin: 40px 30px;
+    padding: 0px !important
+  }
+
+  &.padding-l {
+    padding: 40px 100px !important;
+  }
+
+  &.u-btn-shadow {
+    .u-btn-content {
+      box-shadow: 0px 8px 16px 0px rgba(242, 61, 89, 0.4);
+
+      &:active {
+        box-shadow: #cc6474 0 5px 5px;
+      }
+    }
+  }
+
+  &.u-btn-shadow.u-btn-disabled {
+    .u-btn-content {
+      color: #fff;
+      background-color: #f39ba9;
+      box-shadow: #666 0 5px 5px !important;
+
+      &:active {
+        box-shadow: #777 0 5px 5px !important;
+      }
+    }
+  }
+
+
+  .u-btn-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    height: 100%;
+    flex: 1;
+    padding: 30px 40px;
+    background-color: #F23D59;
+    border-radius: 24px;
+    color: #fff;
+
+    &:active {
+      background-color: #e23c55;
+    }
+  }
+
+  .u-btn-hollow {
+    .u-btn-content {
+      background-color: #fff;
+      color: #F23D59;
+
+      &:active {
+        background-color: #eee;
+      }
+    }
+  }
+
+  // 按钮是空心的
+  &.u-btn-hollow {
+    .u-btn-content {
+      background-color: #fff;
+      border: 2px solid #F23D59;
+      border-radius: 24px;
+      color: #F23D59 !important;
+
+      &:active {
+        background-color: #f8f8f8;
+      }
+    }
+  }
+
+  // 处理金色按钮风格
+  &.is-golden {
+    .u-btn-content {
+      background: linear-gradient(141deg, #ffdbaf, #f0c192);
+      box-shadow: 0 10px 10px rgba(122, 86, 31, 0.4) !important;
+      color: #84592C !important;
+
+      &:active {
+        background: linear-gradient(141deg, #f1c998, #e6b482);
+        box-shadow: 0 10px 10px rgba(107, 75, 26, 0.4) !important;
+        color: #7c5124 !important;
+      }
+    }
+
+    // 禁用样式
+    &.u-btn-disabled {
+      .u-btn-content {
+        background: linear-gradient(141deg, #f0ddc5, #f3cea9);
+        box-shadow: 0 10px 10px rgba(138, 103, 51, 0.4) !important;
+        color: #d8bb9b !important;
+
+        &:active {
+          background: linear-gradient(141deg, #f0ddc5, #ddbe9f);
+          box-shadow: 0 10px 10px rgba(107, 75, 26, 0.4) !important;
+          color: #d4bea4 !important;
+        }
+      }
+    }
+  }
+
+  // 处理金色按钮风格-2
+  &.is-golden2 {
+    .u-btn-content {
+      background: linear-gradient(180deg, #fcedc6, #f7d98f);
+      box-shadow: 0 10px 10px rgba(122, 86, 31, 0.4) !important;
+      color: #B03118 !important;
+
+      &:active {
+        background: linear-gradient(180deg, #f7e7be, #ecce82);
+        box-shadow: 0 10px 10px rgba(107, 75, 26, 0.4) !important;
+        color: #9c2d17 !important;
+      }
+    }
+
+    // 禁用样式
+    &.u-btn-disabled {
+      .u-btn-content {
+        background: linear-gradient(180deg, #f0ddc5, #f3cea9);
+        box-shadow: 0 10px 10px rgba(138, 103, 51, 0.4) !important;
+        color: #d8bb9b !important;
+
+        &:active {
+          background: linear-gradient(180deg, #f0ddc5, #ddbe9f);
+          box-shadow: 0 10px 10px rgba(107, 75, 26, 0.4) !important;
+          color: #d4bea4 !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+.u-btn-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

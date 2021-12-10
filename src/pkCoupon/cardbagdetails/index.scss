@@ -1,0 +1,222 @@
+.coupon-container {
+  width: 100vw;
+  padding-bottom: 200px;
+  .coupon-image {
+    min-height: 200px;
+    background-color: #ececec;
+    .img{
+      width: 100%;
+      vertical-align: bottom;
+    }
+  }
+	.coupon_detali_top{
+		margin: 15px 25px ;
+		.detail_top_title{    
+			font-size: 18px;
+		  color: #000;
+		  font-weight: 600;
+
+		}
+		.d-flex{
+			display: flex;
+			align-items: center;
+		}
+		// 类型
+		.coupon-type {
+			margin-left: 6px;
+			font-size: 10px;
+			color: #ffffff;
+			padding: 2px 6px;
+			border-radius: 50px;
+			border-top-left-radius: 0;
+			background: linear-gradient(90deg, #b5b8c8 0%, #6763a5 100%);
+		
+			&.type-discount{
+				background: linear-gradient(90deg, #e2ca93 0%, #c9a668 100%);
+
+			}
+		}
+.coupon-val-bar{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+		// 进度条
+		.progress-container{
+			width:160px;
+			color: #999999;
+			font-size: 10px;
+			display: flex;
+			align-items: center;
+			.progress-bar{
+					flex:1;
+					display: flex;
+					background-color: #ececec;
+					height:8px;
+					border-radius: 10px;
+					margin: 0 10px;
+					overflow: hidden;
+					.progress{
+							width: 40px;
+							border-radius: 10px;
+							background-color: #F0C17B;
+
+					}
+			}
+		}
+
+
+
+			.detali_r{
+				position: relative;
+			.background_img{
+				width: 44px;
+				height: 17px;
+				margin-left: 5px;
+				margin-top: 20px;
+			}
+			.coupon_item{
+				position: absolute;
+				top: 4px;
+				left: 8px;
+				font-size: 10px;
+				color: #ffffff;
+			}
+
+		}
+		// 9.5折、8000元， 无门槛券
+		.coupon-num{
+			font-size: 14px;
+			// 折扣、金额（元）
+			.coupon-value{
+				color: #F0C17B;
+				font-size: 25px;
+				font-weight: 600;
+			}
+			.coupon-unit{
+				color: #F0C17B;
+				font-size: 10px;
+			}
+			.min-point{
+			   color: #333333;
+			   margin-left: 18px;
+			}
+			.sunnumber{
+				color: #333333;
+			}
+		}
+	}
+	.usuer_contant{
+		margin: 25px;
+		margin-top:25px;
+		color: #333333;
+
+		.user_rule{
+			font-size: 14px;
+			font-weight: 800;
+		}
+		.user_rule_p{
+			margin-top: 10px;
+			font-size: 12px;
+			font-weight: 600;
+			span{
+				margin-right: 10px;
+				font-size: 12px;
+				font-weight: 600;
+			}
+			.user_rule_key{
+				color: #000000;
+				font-weight: 900;
+			}
+		}
+	}
+	.user_konw{
+		margin: 15px;
+		min-height: 100px;
+		background: #FFFFFF;
+		box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.07);
+		border-radius: 10px;
+		padding: 10px;
+		.user_kowns{
+			padding-bottom: 10px;
+			font-size: 14px;
+			color: #333333;
+			font-weight: 800;
+		}
+		.rich_box {
+			font-size: 12px;
+			padding-left: 10px;
+		}
+
+	}
+	.bottom{
+		width: 165px;
+height: 50px;
+background: #F0C17B;
+border-radius: 25px;
+line-height: 50px;
+color: #ffffff;
+font-size: 16px;
+text-align: center;
+	}
+}
+.footer{
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: 12px;
+	padding:20px;
+	width: 80vw;
+	text-align: center;
+
+	.coupon-qrcode{
+    height:180px;
+    width:180px;
+  }
+	.copy-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    .txt-qrcode{
+      width:100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+			white-space: nowrap;
+    }
+    .icon-copy{
+      width: 20px;
+      height: 20px;
+      color:#000;
+      fill:black;
+      background-size: contain;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTM5NC42NjcgMTA2LjY2N2g0NDhhNzQuNjY3IDc0LjY2NyAwIDAgMSA3NC42NjYgNzQuNjY2djQ0OEE3NC42NjcgNzQuNjY3IDAgMCAxIDg0Mi42NjcgNzA0aC00NDhBNzQuNjY3IDc0LjY2NyAwIDAgMSAzMjAgNjI5LjMzM3YtNDQ4YTc0LjY2NyA3NC42NjcgMCAwIDEgNzQuNjY3LTc0LjY2NnptMCA2NEExMC42NjcgMTAuNjY3IDAgMCAwIDM4NCAxODEuMzMzdjQ0OEExMC42NjcgMTAuNjY3IDAgMCAwIDM5NC42NjcgNjQwaDQ0OGExMC42NjcgMTAuNjY3IDAgMCAwIDEwLjY2Ni0xMC42Njd2LTQ0OGExMC42NjcgMTAuNjY3IDAgMCAwLTEwLjY2Ni0xMC42NjZoLTQ0OHpNNjQwIDc2OGEzMiAzMiAwIDAgMSA2NCAwdjc0LjY2N2E3NC42NjcgNzQuNjY3IDAgMCAxLTc0LjY2NyA3NC42NjZoLTQ0OGE3NC42NjcgNzQuNjY3IDAgMCAxLTc0LjY2Ni03NC42NjZ2LTQ0OEE3NC42NjcgNzQuNjY3IDAgMCAxIDE4MS4zMzMgMzIwSDI1NmEzMiAzMiAwIDAgMSAwIDY0aC03NC42NjdhMTAuNjY3IDEwLjY2NyAwIDAgMC0xMC42NjYgMTAuNjY3djQ0OGExMC42NjcgMTAuNjY3IDAgMCAwIDEwLjY2NiAxMC42NjZoNDQ4QTEwLjY2NyAxMC42NjcgMCAwIDAgNjQwIDg0Mi42NjdWNzY4eiIvPjwvc3ZnPg==');
+    }
+
+  }
+	.footer{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+	// 按钮公共样式
+	.btn{
+		width: 165px;
+		height: 50px;
+		background: #F0C17B;
+		border-radius: 25px;
+		color: #fff;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:active{
+			background: #d3a869;
+		}
+	}
+
+}

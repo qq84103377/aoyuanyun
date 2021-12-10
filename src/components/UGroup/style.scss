@@ -1,0 +1,13 @@
+.u-group {
+  overflow: hidden;
+
+  &-header {
+    font-size: 26px;
+    padding: 0 $ui-padding-lr;
+  }
+
+  &-footer {
+    font-size: 24px;
+    padding: 0 $ui-padding-lr;
+  }
+}

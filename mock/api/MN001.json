@@ -1,0 +1,17 @@
+{
+    "header": {
+        "errorCode": "0",
+        "errorMsg": "查询是否绑定"
+    },
+    "body": {
+        "partnerCredit": "3000",
+        "partnerName": "张三",
+        "accountNo": "200",
+        "partnerPhone": "13423456789",
+        "systemID": "111111",
+        "srcSystemID": "1322222",
+        "transFlow": "213213131",
+        "transGlobalFlow": "1234328974",
+        "transCode": "21398123"
+    }
+}

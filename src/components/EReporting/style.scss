@@ -1,0 +1,138 @@
+.card{
+  background-color: #fff;
+  padding: 30px 30px 0;
+  border-radius: 10px;
+  width: 250px;
+}
+.icon-x{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  right:10px;
+  padding:10px;
+}
+.text-danger{
+  color:#F0C17B
+}
+.content{
+  min-height: 200px;
+  font-size: 14px;
+  .input-group{
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    padding-bottom: 10px;
+    .label{
+      width: 90px;
+    }
+    .input{
+      flex: 1;
+      color: #333333;
+    }
+    .build-list{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -10px;
+    }
+    .build-item{
+      padding: 5px 10px;
+      border-radius: 100px;
+      border: 1px solid #F0C17B;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100px;
+      text-overflow: ellipsis;
+    }
+    .btn-add{
+      margin-bottom: 15px;
+      line-height: 30px;
+      padding:10px;
+      width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon-add{
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .input-name{
+      display: flex;
+      align-items: center;
+      position: relative;
+      .text-box{
+        width: 90px;
+        border-bottom: 1.5px solid #f4f4f4;
+        padding:2px;
+        padding-right: 30px;
+        &.is-editting{
+          border-bottom: 1.5px solid #D3D3D3;
+
+        }
+      }
+      .icon-edit{
+        position: relative;
+        left:-20px;
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.footer{
+  .text{
+    font-size: 12px;
+    color:#999999;
+  }
+  .check_btn {
+    width: 20px;
+    height: 20px;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    margin-right: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .btn-submit{
+    width: 120px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin: 5px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background-color: #F0C17B;
+    &.disabled{
+      background-color: #D3D3D3;
+  }
+  }
+  .btn-text{
+    padding: 15px 30px;
+    margin: 0 auto;
+    text-align: center;
+    color:#D3D3D3;
+    font-size: 12px;
+  }
+  .agreement{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .check_btn {
+    width: 20px;
+    height: 20px;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

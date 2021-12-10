@@ -1,0 +1,56 @@
+.top-bar {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  color: #fff;
+  z-index: 100;
+  transition: .3s ease background;
+  .top-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .left{
+      position: absolute;
+      left: 0;
+      bottom: 0;;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .top-back{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon-arrow{
+      width:16px;
+      height:16px;
+
+    }
+
+  }
+
+  .top-address {
+    font-size: 30upx;
+    padding: 10px;
+    &::before {
+      content: '';
+      width: 36upx;
+      height: 36upx;
+      display: inline-block;
+      position: relative;
+      top: 6upx;
+      margin-right: 4upx;
+      background: url(https://img04.aomygod.com/fontend/202178/imgs/ic_location.png) no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .top-title {
+    font-size: 36upx;
+    font-weight: 500;
+  }
+}

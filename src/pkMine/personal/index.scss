@@ -1,0 +1,114 @@
+.page{
+  border-top: 10px solid #ededed;
+}
+
+@mixin setBottomLine($c: #ededed) {
+  content: ' ';
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  right: 20px;
+  height: 2px;
+  border-bottom: 1px solid $c;
+  color: $c;
+  transform-origin: 0 100%;
+  pointer-events: none;
+}
+
+.avatar{
+  display: flex;
+  align-items: center;
+  color: #666;
+  position: relative;
+  &::after {
+    @include setBottomLine(#ededed);
+  }
+  .title{
+    min-width: 90px;
+    margin-left: 20px;
+  }
+  .img{
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+  }
+}
+
+.ctrl-bar{
+  position: fixed;
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  .btn{
+    padding: 15px;
+    text-align: center;
+    color:#F0C17B;
+    &:active{
+      background-color: #f0f0f0;
+    }
+  }
+
+  .btn-back {
+    width: 160px;
+    height: 40px;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background: linear-gradient(297deg, #f0c17b 0%, #fadbad 100%);
+
+    &:active {
+      background: linear-gradient(297deg, #f0be74 0%, #f3d2a0 100%);
+    }
+  }
+}
+
+.tips_box {
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  .tips_inbox {
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #333;
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    font-weight: 600;
+    .tips_text {
+      font-weight: 400;
+      font-size: 14px;
+      color: #666;
+      padding: 20px 20px 40px;
+    }
+    .tips_btn {
+      background-color: #f0c17b;
+      width: 150px;
+      height: 35px;
+      border-radius: 35px;
+      line-height: 35px;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      margin: 0 auto;
+    }
+  }
+}

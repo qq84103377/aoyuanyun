@@ -1,0 +1,37 @@
+.essentialInformation{
+    border-bottom: 1px solid #F4F4F4;
+    padding: 15px 0 5px;
+    .p1{
+        color: #333333;
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 12px;
+    }
+    .p2{
+      color:#999999;
+      font-size: 14px;
+      padding-bottom: 10px;
+      display: flex;
+      span {
+        min-width: 74px;
+      }
+    }
+}
+// 固定到头部导航
+// u-tab-nav{
+//     margin: 0 auto;
+//     position: fixed;
+//     width: 100%; 
+//     top: 45; 
+//     left: 0; 
+//     right: 0;
+//     z-index: 99999;
+// }
+.tab_nav_box {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.houses {
+    padding: 43px 15px;
+}

@@ -1,0 +1,228 @@
+#app {
+  background-color: $global-background-color;
+}
+
+
+// 输入框
+.app-input {
+  color: $app-input-color;
+  background-image: linear-gradient(135deg,
+      $app-input-bg-start-color 0%,
+      $app-input-bg-end-color 100%);
+
+  input {
+    color: $app-input-color;
+  }
+
+  input::-webkit-input-placeholder {
+    color: $app-input-placeholder-color;
+  }
+}
+
+.app-input-wrapper-bottom-line {
+  &:not(:last-child) {
+    position: relative;
+
+    &::after {
+      margin: 0 30px;
+      @include setBottomLine;
+    }
+  }
+}
+
+// 输入框提示文字颜色
+.app-input-placeholder {
+  @include setPlaceholderStyle($app-input-placeholder-color);
+}
+
+// 输入框禁用状态颜色
+.app-input-disabled {
+  /* Override iOS / Android font color change */
+  text-fill-color: $app-input-disabled-color;
+  -webkit-text-fill-color: $app-input-disabled-color;
+}
+
+// 输入框左边文字颜色
+.app-input-label {
+  color: $app-input-label-color;
+}
+
+// 输入框左边小提示文字颜色
+.app-input-tip {
+  color: $app-input-tip-color;
+}
+
+// 输入框圆角
+.app-input-radius {
+  border-radius: $app-input-radius;
+}
+
+// 输入框边框
+.app-input-border-around {
+  border-radius: $app-input-radius;
+  @include setAfterBorder($app-input-radius, $app-input-border-color);
+}
+
+// 输入框底部线条
+.app-input-border-bottom {
+  &::after {
+    @include setBottomLine($app-input-border-color);
+  }
+}
+
+// 实心按钮
+.app-btn-solid {
+  border-radius: $button-border-radius;
+  // 实心按钮文字颜色
+  color: $button-solid-text-color;
+  // 实心按钮背景颜色
+  background-color: $button-solid-background-color1;
+
+  &:active {
+    // 实心按钮高亮状态背景颜色
+    background-color: $button-solid-background-color-active;
+  }
+
+  &.app-btn-disabled {
+    color: $button-solid-text-color-disabled;
+    // 实心按钮禁用状态背景颜色
+    background-color: $button-solid-background-color-disabled !important;
+
+    &:active {
+      // 实心按钮高亮状态背景颜色
+      background-color: $button-solid-background-color-disabled;
+    }
+  }
+}
+
+// 空心按钮
+.app-btn-hollow {
+  border-radius: $button-border-radius;
+  // 空心按钮文字颜色
+  color: $button-hollow-text-color;
+  background: $button-hollow-background-color;
+  // 空心按钮边框颜色
+  border-color: $button-hollow-border-color;
+  box-sizing: border-box;
+  position: relative;
+  border: 2px solid $button-hollow-border-color;
+
+  &:active {
+    color: $button-hollow-text-color-active;
+    border-color: $button-hollow-border-color-active;
+    // 空心按钮高亮状态边框颜色
+    background-color: $button-hollow-background-color-active;
+  }
+
+  &.app-btn-disabled {
+    color: $button-hollow-text-color-disabled;
+    // 空心按钮禁用状态背景颜色
+    background-color: $button-hollow-background-color-disabled;
+    border: 2px solid $button-hollow-border-color-disabled;
+
+    &:active {
+      // 空心按钮高亮状态背景颜色
+      background-color: $button-hollow-background-color-disabled;
+    }
+  }
+}
+
+// 大按钮箭头
+.app-btn-arrow-l {
+  width: 20px;
+  height: 40px;
+  @include setBackgroundImage($button-arrow-s);
+}
+
+// 小按钮箭头
+.app-btn-arrow-s {
+  width: 10px;
+  height: 20px;
+  @include setBackgroundImage($button-arrow-s);
+}
+
+.app-group-bg {
+  background: linear-gradient(to right,
+      $group-background-color1,
+      $group-background-color2);
+}
+
+.app-group-header {
+  color: $group-title-color;
+}
+
+.app-group-footer {
+  color: $group-footer-text-color;
+}
+
+// cell
+
+.app-cell-bg {
+  background: linear-gradient(to right,
+      $cell-background-color1,
+      $cell-background-color2);
+}
+
+.app-cell {
+  font-size: $cell-font-size;
+
+  &:not(:last-child) {
+    .app-cell-content {
+      position: relative;
+
+      &::after {
+        @include setBottomLine($cell-bottom-line-color);
+      }
+    }
+  }
+
+  .app-cell-title {
+    font-size: $cell-title-font-size;
+    color: $cell-title-font-color;
+  }
+
+  .app-cell-value {
+    font-size: $cell-value-font-size;
+    color: $cell-value-font-color;
+  }
+}
+
+.app-cell-active {
+  &:active {
+    background: $cell-background-color-active;
+  }
+}
+
+.app-set-arrow {
+  @include setBackgroundImage('ic_entry_gray.png');
+}
+
+// tab切换标签默认样式
+.app-tab-background {
+  background-color: $app-tab-background-color;
+}
+
+.app-tab-text {
+  color: $app-tab-text-color;
+}
+
+.app-tab-text-active {
+  color: $app-tab-text-active-color;
+  border-bottom: 6px solid $app-tab-text-active-color;
+}
+
+.app-tab-text-disable {
+  color: $app-tab-text-disable-color;
+}
+
+.app-tab-bar {
+  background-color: $app-tab-bar-color;
+}
+
+.app-tab-bar-active {
+  background-color: $app-tab-bar-active-color;
+}
+
+.app-tab-bar-disable {
+  background-color: $app-tab-bar-disable-color;
+}

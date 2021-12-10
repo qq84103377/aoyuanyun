@@ -1,0 +1,92 @@
+.u-cell {
+  font-size: 14px;
+  margin: 0 $ui-spacing-row-20;
+
+  &.small-space{
+    margin: 0 10px;
+    .u-cell-content{
+      height: 40px;
+    }
+  }
+  &.has-border{
+    border-bottom: 1px solid #F3F3F3;
+  }
+  .u-cell-left {
+    height: $ui-line-height;
+    color: #666;
+    @include flexLayout(row, flex-start, center);
+    min-width: 90px;
+  }
+  .u-cell-icon-after{
+    @include flexLayout(row, flex-end, center);
+  }
+  .u-cell-right {
+    color: #333;
+    flex: 1;
+    @include flexLayout(row, flex-end, center);
+  }
+
+  .u-cell-content {
+    // padding: 0 $ui-padding-lr;
+    height: 50px;
+    @include flexLayout(row, space-between, center);
+    color: #333;
+    &:active {
+      background-color: #fafafa;
+    }
+  }
+
+  .u-cell-bottom {
+    padding: 0 $ui-padding-lr;
+    height: 0px;
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+
+}
+.require-flag{
+  color:#FF2525;
+  padding-right: .2rem;
+}
+.u-set-arrow {
+  padding-right: 30px;
+
+  &::after {
+    margin-top: -0.11rem !important;
+    transition: transform .3s;
+  }
+
+  &.extended::after {
+    transform: rotate(135deg);
+  }
+}
+
+@mixin setBottomLine($c: #ededed) {
+  content: ' ';
+  position: absolute;
+  left: $ui-padding-lr;
+  bottom: 0;
+  right: $ui-padding-lr;
+  height: 2px;
+  // border-bottom: 2px solid $c;
+  color: $c;
+  transform-origin: 0 100%;
+  // transform: scaleY(0.5);
+  pointer-events: none;
+}
+
+.app-cell {
+  position: relative;
+
+  &::after {
+    @include setBottomLine(#ededed);
+  }
+}
+
+.u-cell-placeholder {
+  color: #7c7c7c;
+  flex: 1;
+}
+.u-cell-value{
+  flex:1;
+}

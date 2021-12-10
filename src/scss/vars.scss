@@ -1,0 +1,45 @@
+/**
+ * 设计稿以 750 X 1334 为标准，抽取公共变量
+ */
+
+// 色彩体系，参见 theme*.scss
+
+// 字号
+$ui-fontsize-14: 14px;
+$ui-fontsize-20: 20px;
+$ui-fontsize-22: 22px;
+$ui-fontsize-24: 24px;
+$ui-fontsize-28: 28px;
+$ui-fontsize-30: 14px;
+$ui-fontsize-60: 60px;
+
+// 透明度
+$ui-opacity-30: 0.3;
+
+// 水平间距
+$ui-spacing-row-20: 20px;
+$ui-spacing-row-30: 30px;
+$ui-spacing-row-32: 32px;
+
+// 垂直间距
+$ui-spacing-row-16: 16px;
+$ui-spacing-row-20: 20px;
+$ui-spacing-row-32: 32px;
+
+// 两侧padding
+$ui-padding-lr: 30px;
+
+// 行高
+$ui-line-height: 40px;
+
+/**
+ ************************************************
+ * 组件 button 大小在下面定义
+ ************************************************
+ */
+// 字体大小
+$cell-font-size: $ui-fontsize-14;
+// title字体大小
+$cell-title-font-size: $ui-fontsize-30;
+// value字体大小
+$cell-value-font-size: $ui-fontsize-30;

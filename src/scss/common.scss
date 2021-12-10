@@ -1,0 +1,96 @@
+button,
+input {
+
+  &.u-button,
+  &.u-input {
+    border-width: 0;
+    outline: 0;
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.u-2px,
+.u-2px-t,
+.u-2px-b,
+.u-2px-tb,
+.u-2px-l,
+.u-2px-r {
+  position: relative;
+}
+
+.u-2px {
+  &:before {
+    @include setLine();
+  }
+}
+
+.u-2px-t {
+  &:before {
+    @include setTopLine();
+  }
+}
+
+.u-2px-b {
+  &:after {
+    @include setBottomLine();
+  }
+}
+
+.u-2px-tb {
+  &:before {
+    @include setTopLine();
+  }
+
+  &:after {
+    @include setBottomLine();
+  }
+}
+
+.u-2px-l {
+  &:before {
+    @include setLeftLine();
+  }
+}
+
+.u-2px-r {
+  &:after {
+    @include setRightLine();
+  }
+}
+
+// 用于设置箭头
+.u-set-arrow {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  &::after {
+    content: ' ';
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    border-width: 2.5px 2.5px 0 0;
+    border-color: #c8c8cd;
+    border-style: solid;
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 8px;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(0deg);
+    transition: transform 0.3s;
+  }
+}
+
+.u_arrow_up {
+  &::after {
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);
+  }
+}
+
+.u_arrow_down {
+  &::after {
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg) translateY(2px);
+  }
+}

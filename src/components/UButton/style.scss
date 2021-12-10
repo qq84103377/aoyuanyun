@@ -1,0 +1,88 @@
+.u-button {
+  position: relative;
+  display: inline-flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.u-button-content {
+  border-radius: 25px;
+  background: #F0C17B;
+  width: 165px;
+  height: 50px;
+  font-size: 16px;
+  @include flexLayout;
+  position: relative;
+
+  &-left {
+    height: 100%;
+    flex: 1;
+    @include flexLayout;
+  }
+
+  &-right {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 50px;
+  }
+}
+
+.u-button-no-radius {
+  border-radius: 0 !important;
+
+  &::after {
+    border-radius: 0 !important;
+  }
+}
+
+.u-button-l {
+  width: 100%;
+  height: 90px;
+  font-size: 30px;
+}
+
+.u-button-m {
+  width: 330px;
+  height: 90px;
+  font-size: 30px;
+}
+
+.u-button-s {
+  width: 200px;
+  height: 60px;
+  font-size: 24px;
+}
+
+.u-button-arrow-wrapper {
+  height: 100%;
+  width: 40px;
+  box-sizing: border-box;
+  position: absolute;
+  padding-right: 20px;
+  @include flexLayout;
+  display: -webkit-box;
+  right: 0;
+  top: 0;
+}
+
+.u-button-arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.u-button-radio {
+  border-radius: 90px !important;
+
+  &::after {
+    border-radius: 180px !important;
+  }
+}

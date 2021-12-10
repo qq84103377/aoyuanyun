@@ -1,0 +1,54 @@
+// 默认版主题
+
+/**
+ ************************************************
+ * 色彩体系，整个主题颜色统一在下面定义
+ ************************************************
+ */
+
+// 重要
+$ui-color-ea2c1d: #ea2c1d;
+$ui-color-ce2619: #ce2619;
+$ui-color-ce9e76: #ce9e76;
+$ui-color-754533: #754533;
+
+// 一般
+$ui-color-09122b: #09122b;
+$ui-color-888888: #888888;
+$ui-color-c1c1c1: #c1c1c1;
+
+$ui-color-459FFC: #459ffc; // 链接
+
+// 较弱
+$ui-color-ffffff: #ffffff;
+$ui-color-f2f4f7: #f2f4f7;
+$ui-color-ededed: #ededed;
+$ui-color-f5f5f9: #f5f5f9;
+
+// 会员卡片配色，设计渐变，UI未标出
+
+// 理财、基金、存款配色，设计渐变，UI未标出
+
+/**
+ ************************************************
+ * 背景色
+ ************************************************
+ */
+$global-background-color: $ui-color-f2f4f7;
+
+// 光标颜色
+$flash-cursor-bg-color: $ui-color-ea2c1d;
+
+// 箭头颜色
+$app-arrow-color: $ui-color-ea2c1d;
+
+@import './default/u-group.scss';
+@import './default/u-cell.scss';
+@import './default/u-button.scss';
+@import './default/u-input.scss';
+@import './default/u-tab.scss';
+
+.app-theme-default {
+  // 导入主题公共部分
+  @import './theme.scss';
+}

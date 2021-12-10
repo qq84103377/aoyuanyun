@@ -1,0 +1,34 @@
+.location{
+  position: absolute;
+  border-radius: 20px;
+  padding: 5px;
+  padding-right: 6px;
+  z-index: 100;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255,255,255,.3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  overflow: hidden;/*超出部分隐藏*/
+  white-space: nowrap;/*不换行*/
+  text-overflow:ellipsis;/*超出部分文字以...显示*/
+
+  &::before {
+    content: '';
+    width: 36upx;
+    height: 36upx;
+    display: inline-block;
+    margin-right: 4upx;
+    background: url(https://img04.aomygod.com/fontend/202178/imgs/ic_location.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &:active{
+    background-color: rgba(255,255,255,.2);
+  }
+}
+.is-guest{
+  pointer-events: none;
+}

@@ -1,0 +1,42 @@
+// 实心按钮，背景渐变起始颜色
+$button-solid-background-color1: $ui-color-ea2c1d;
+// 实心按钮，背景渐变结束颜色
+$button-solid-background-color2: $ui-color-ea2c1d;
+// 实心按钮，激活态背景颜色
+$button-solid-background-color-active: $ui-color-ce2619;
+// 实心按钮，禁用态背景颜色
+$button-solid-background-color-disabled: $ui-color-c1c1c1;
+
+// 实心按钮，文字颜色
+$button-solid-text-color: $ui-color-ffffff;
+// 实心按钮，禁用态文字颜色
+$button-solid-text-color-disabled: $ui-color-ffffff;
+// 实心按钮，激活态文字颜色
+$button-solid-text-color-active: $ui-color-ffffff;
+
+// 空心按钮，背景颜色
+$button-hollow-background-color: transparent;
+// 空心按钮，禁用态背景颜色
+$button-hollow-background-color-disabled: transparent;
+// 空心按钮，激活态背景颜色
+$button-hollow-background-color-active: transparent;
+
+// 空心按钮，文字颜色
+$button-hollow-text-color: $ui-color-ea2c1d;
+// 空心按钮，禁用态文字颜色
+$button-hollow-text-color-disabled: $ui-color-c1c1c1;
+// 空心按钮，激活态文字颜色
+$button-hollow-text-color-active: rgba(234, 44, 29, 0.7);
+
+// 空心按钮，边框颜色
+$button-hollow-border-color: $ui-color-ea2c1d;
+// 空心按钮，禁用态边框颜色
+$button-hollow-border-color-disabled: $ui-color-c1c1c1;
+// 空心按钮，激活态边框颜色
+$button-hollow-border-color-active: rgba(234, 44, 29, 0.7);
+
+// 按钮圆角大小
+$button-border-radius: 4px;
+
+// 按钮小箭头图片
+$button-arrow-s: 'ic_entry_default.png';

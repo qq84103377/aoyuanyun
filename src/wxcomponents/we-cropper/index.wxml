@@ -1,0 +1,10 @@
+<view wx:if="{{show}}" class="cropper-wrapper">
+  <canvas class="cropper" disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="width:{{cropperOpt.width}}px;height:{{cropperOpt.height}}px;background-color: rgba(0, 0, 0, 0.8)" canvas-id="{{cropperOpt.id}}"></canvas>
+  <canvas class="cropper" disable-scroll="true" style="position: fixed; top: -{{cropperOpt.width * cropperOpt.pixelRatio}}px; left: -{{cropperOpt.height * cropperOpt.pixelRatio}}px; width:{{cropperOpt.width * cropperOpt.pixelRatio}}px;height:{{cropperOpt.height * cropperOpt.pixelRatio}}px;" canvas-id="{{cropperOpt.targetId}}"></canvas>
+  <view class="cropper-buttons" style="color: {{cropperOpt.boundStyle.color}}">
+    <view class="upload btn" bindtap="cancel">取消</view>
+    <view class="getCropperImage btn" style="background-color: {{cropperOpt.boundStyle.color}};" bindtap="getCropperImage">
+      确定
+    </view>
+  </view>
+</view>

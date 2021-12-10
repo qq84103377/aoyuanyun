@@ -1,0 +1,78 @@
+$easing-in-out: cubic-bezier(0.35, 0, 0.25, 1);
+$effect-duration: .3s;
+
+.u-tab-wrap {
+  position: relative;
+  padding-top: 88px;
+}
+
+.u-tab-container {
+  height: 88px;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.u-tab {
+  display: flex;
+  height: 88px;
+  position: relative;
+}
+
+.u-tab button {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+  appearance: none;
+}
+
+.u-tab-ink-bar {
+  position: absolute;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.u-tab-ink-bar-transition-forward {
+  transition: right $effect-duration $easing-in-out,
+    left $effect-duration $easing-in-out $effect-duration * 0.3;
+}
+
+.u-tab-ink-bar-transition-backward {
+  transition: right $effect-duration $easing-in-out $effect-duration * 0.3,
+    left $effect-duration $easing-in-out;
+}
+
+.u-tab-bar-top {
+  .u-tab-ink-bar {
+    top: 0;
+  }
+}
+
+.u-tab-bar-inner {
+  display: block;
+  margin: auto;
+  height: 100%;
+  transition: width 0.3s $easing-in-out;
+}
+
+.scrollable {
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 34px;
+  box-sizing: content-box;
+
+  .u-tab-ink-bar {
+    bottom: 34px;
+    position: absolute;
+  }
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none;
+}

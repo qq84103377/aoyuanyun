@@ -1,0 +1,119 @@
+.pages_coupon{
+    height: 100%;
+    background-color: #F8F8F8;
+    padding-top: 1px;
+    padding-bottom: 40px;
+    .cardbag-list-content {
+        border-radius: 10px;
+        overflow: hidden;
+        height: 115px;
+        margin: 15px 15px 15px 15px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        &::before {
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          position: absolute;
+        }
+        .cardbag-list-content-top {
+          position: relative;
+          z-index: 1;
+          padding: 15px 15px 0px 15px;
+          .cardbag-list-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+          }
+          .cardbag-list-time {
+            font-size: 10px;
+            color: #fff;
+          }
+        }
+        .cardbag-list-content-bottom {
+          position: relative;
+          z-index: 1;
+  
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: 25px;
+          padding-left: 15px;
+          padding-top: 15px;
+          box-sizing: border-box;
+          .gotoUser {
+            height: 25px;
+            width: 64px;
+            font-size: 10px;
+            color: #fff;
+            border-radius: 5px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 25px;
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+          .goto-right {
+            display: flex;
+            justify-content: space-around;
+            height: 40px;
+            line-height: 40px;
+            padding-right: 15px;
+            span {
+              font-size: 10px;
+              color: #fff;
+            }
+            .gotoicon {
+              height: 13px;
+              width: 13px;
+              padding-top: 13px;
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+    // 进度条
+    .progress-container{
+        width:160px;
+        color: #999999;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        .progress-bar{
+            flex:1;
+            display: flex;
+            background-color: #fff;
+            height:8px;
+            border-radius: 10px;
+            margin: 0 10px;
+            
+            .progress{
+                width: 40px;
+                border-radius: 10px;
+                background-color: #F0C17B;
+
+            }
+        }
+    }
+    .loading{
+        text-align: center;
+		font-size: 12px;
+        color: #8F8F94;
+    }
+    .no-record {
+        height: 400px;
+        margin-top: 20px;
+        background: no-repeat url($ui-asset-url + "coupon/no-record.png");
+        background-size: 80%;
+        background-position: top center;
+        position: relative;
+        .btn {
+          position: absolute;
+          bottom: 0;
+          left: calc(50% - 82.5px);
+        }
+      }
+}
